@@ -4,14 +4,17 @@ int search(int numbers[], int low, int high, int value) {
 	if (low > high) {
 	    return -1;
 	}
-
+	// Calculate the middle index
 	int mid = low + (high - low) / 2;
 
 	if (numbers[mid] == value) {
+	    // Value found at the middle index
     	    return mid;
 	} else if (numbers[mid] > value) {
+	    // Left side of the array
             return search(numbers, low, mid - 1, value);
 	} else {
+	    // Right side of the array
             return search(numbers, mid + 1, high, value);
 	}
 }
