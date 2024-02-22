@@ -10,7 +10,7 @@ int search(int numbers[], int low, int high, int value) {
 	if (numbers[mid] == value) {
     	    return mid;
 	} else if (numbers[mid] > value) {
-            return searech(numbers, low, mid - 1, value);
+            return search(numbers, low, mid - 1, value);
 	} else {
             return search(numbers, mid + 1, high, value);
 	}
